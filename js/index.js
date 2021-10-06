@@ -27,7 +27,6 @@ const handleMenu2 = () => {
 }
 
 const handleMenu3 = () => {
-	console.log('aqui');
 	sidebarElement.children[0].style.backgroundColor = 'green';
 }
 

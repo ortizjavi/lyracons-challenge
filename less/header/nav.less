@@ -1,0 +1,80 @@
+#nav-options {
+  display: flex;
+  flex-direction: column;
+  gap: 40px 0px;
+  button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+
+  li:first-child {
+    position: relative;
+    input {
+      width: 100%;
+      height: 100%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      opacity: 0;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    input:checked ~ .header-nav-submenu {
+        display: block;
+    }
+
+  }
+
+  .header-nav-submenu {
+    display: none;
+    margin-top: 20px;
+    ol {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 20px 0px;
+    }
+  }
+}
+
+
+@media @desktop {
+  #nav-options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0 30px;
+    button {
+      font-size: 1.8rem;
+      font-weight: bold;
+      line-height: 2;
+    }
+    .header-nav-submenu {
+      width: 120%;
+      position: absolute;
+      background: @filling-color;
+      margin-top: 0;
+      ol {
+        align-items: center;
+      }
+      button {
+        font-size: 1.4rem;
+      }  
+    }
+  }
+
+
+}
+

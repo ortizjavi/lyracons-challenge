@@ -1,0 +1,59 @@
+.item {
+	width: 42.5%;
+	flex: 0 0 42.5%;
+	border: 1px solid @main-font-color;
+	padding: 2.5% 3%;
+
+	display: flex;
+	flex-direction: column;
+
+	
+	.item-image {
+		width: 100%;
+		position: relative;
+
+		&:after {
+		  content: "";
+		  display: block;
+		  padding-bottom: 100%;
+		}
+
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: 27.5% 20%;
+			max-width: 100%;
+		}
+	}	
+	.item-description {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		margin: 12px 0;
+		font-size: 1.3rem;
+		font-weight: 300;
+
+		h3 {
+			font-weight: bold;
+		}
+	}
+
+	.item-buy-btn {
+		text-transform: uppercase;
+		font-weight: bold;
+		background-color: @filling-color;
+		border: none;
+		padding: 6px;
+		cursor: pointer;
+	}
+}
+
+@media @desktop {
+	.item {
+		width: 22.5%;
+		flex: 0 0 22.5%;
+		padding: 1.4% 1.75%;
+	}
+}

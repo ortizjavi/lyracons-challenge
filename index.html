@@ -1,0 +1,74 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lyracons Challenge - Frontend</title>
+
+  <link href="css/index.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <script src="js/index.js" type="text/javascript" charset="utf-8" async ></script>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="header-logo">
+        <img src="./img/logo_lyracons.png" alt="lyracons logo">
+      </div>
+      <nav>
+        <div id="hamburguer-menu">
+          <input type="checkbox" id="check-menu"/>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ol id="nav-options">
+          <li>
+            <input type="checkbox" name="submenu"/>
+            <button class="header-nav-item" type="button"> Menu item 1 </button>
+            <div class="header-nav-submenu fade-in">
+                <ol>
+                  <li><button type="button"> Submenu item 1 </button></li>
+                  <li><button type="button"> Submenu item 2 </button></li>
+                  <li><button type="button"> Submenu item 3 </button></li>
+                </ol>
+            </div>
+          </li>
+          <li><button class="header-nav-item" type="button"> Menu item 2 </button></li>
+          <li><button class="header-nav-item" type="button"> Menu item 3 </button></li>
+          <li><button class="header-nav-item" type="button"> Menu item 4 </button></li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <main id="home">
+    <section class="sidebar">
+      <div id="advertising-block"></div> 
+    </section>
+    <section class="items-list">
+      <div class="item">
+        <div class="item-image fade-in">
+          <img src="./img/headphones_sony.jpg" alt="lyracons product"><img> 
+        </div>
+        <div class="item-description">
+          <h3 class="item-title">
+            Titulo del producto
+          </h3>
+          <span class="item-branch">
+            Marca
+          </span>
+          <span class="item-price">
+            $ 12.345,00
+          </span>
+        </div>
+        <button type="button" class="item-buy-btn"> Comprar </button>
+      </div>
+    </section>
+  </main>
+</body>
+<div class="dropdown-menu slide-bottom"></div>
+</html>

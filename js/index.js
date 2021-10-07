@@ -27,7 +27,7 @@ const handleMenu2 = () => {
 }
 
 const handleMenu3 = () => {
-	sidebarElement.children[0].style.backgroundColor = 'green';
+	sidebarElement.children[0].style.backgroundColor = getRandomColor();
 }
 
 const handleMenu4 = () => {
@@ -52,6 +52,12 @@ if (window.screen.width < 500){
 	console.log('here')
 } else {
 	navOptions.children[1].firstChild.onclick = handleMenu2
-	navOptions.children[2].firstChild.onclick = handleMenu3;
+	navOptions.children[2].firstChild.onmouseover = handleMenu3;
 	navOptions.children[3].firstChild.onclick = handleMenu4;
+}
+
+// Generate Random Color
+const getRandomColor = () => {
+	const randomColor = Math.floor(Math.random()*16777215).toString(16);
+	return "#" + randomColor;
 }
